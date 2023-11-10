@@ -5,6 +5,7 @@ import javax.swing.*;
 public class SwingControlDemo implements ActionListener {
     private JFrame mainFrame;
     private JLabel statusLabel;
+    private JLabel hello;
     private JPanel controlPanel;
     private JMenuBar mb;
     private JMenu file, edit, help;
@@ -54,11 +55,17 @@ public class SwingControlDemo implements ActionListener {
         ta = new JTextArea();
         ta.setBounds(50, 5, WIDTH-100, HEIGHT-50);
         mainFrame.add(mb);  //add menu bar
+        hello = new JLabel("hello", JLabel.CENTER);
+        hello.setSize(400, 200);
+        mainFrame.add(hello);
         mainFrame.add(ta);//add typing area
+
         mainFrame.setJMenuBar(mb); //set menu bar
 
         statusLabel = new JLabel("", JLabel.CENTER);
         statusLabel.setSize(350, 100);
+
+
 
         mainFrame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent windowEvent) {
@@ -94,8 +101,9 @@ public class SwingControlDemo implements ActionListener {
         controlPanel.add(submitButton);
         controlPanel.add(cancelButton);
         controlPanel.add(emilyButton);
-
+        mainFrame.add(hello);
         mainFrame.setVisible(true);
+
     }
 
     @Override
