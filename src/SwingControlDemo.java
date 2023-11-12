@@ -27,7 +27,7 @@ public class SwingControlDemo implements ActionListener {
     private void prepareGUI() {
         mainFrame = new JFrame("Java SWING Examples");
         mainFrame.setSize(WIDTH, HEIGHT);
-        mainFrame.setLayout(new GridLayout(3, 1));
+        mainFrame.setLayout(new GridLayout(4, 1));
 
         //menu at top
         cut = new JMenuItem("cut");
