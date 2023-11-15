@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Medium2 {
     private JFrame mainFrame;
     private JLabel label;
-    private JPanel controlPanel;
+    private JPanel panel;
     private JPanel miniPanel;
     private JMenuBar mb;
     private JMenu file, edit, help;
@@ -13,7 +13,6 @@ public class Medium2 {
     private JTextArea ta; //typing area
     private int WIDTH=800;
     private int HEIGHT=700;
-
 
     public Medium2() {
         prepareGUI();
@@ -34,8 +33,8 @@ public class Medium2 {
                 System.exit(0);
             }
         });
-        controlPanel = new JPanel();
-        controlPanel.setLayout(new BorderLayout()); //set the layout of the panel
+        panel = new JPanel();
+        panel.setLayout(new BorderLayout()); //set the layout of the panel
 
 //        miniPanel = new JPanel();
 //        miniPanel.setLayout(new GridLayout(1,2)); //set the layout of the panel
@@ -62,15 +61,15 @@ public class Medium2 {
 //        miniPanel.add(label);
 //        miniPanel.add(button9);
 //        controlPanel.add(miniPanel);
-        controlPanel.add(button9, BorderLayout.EAST);
-        controlPanel.add(label, BorderLayout.CENTER);
-        controlPanel.add(button10, BorderLayout.SOUTH);
+        panel.add(button9, BorderLayout.EAST);
+        panel.add(label, BorderLayout.CENTER);
+        panel.add(button10, BorderLayout.SOUTH);
 
         mainFrame.add(button1);
         mainFrame.add(button2);
         mainFrame.add(button3);
         mainFrame.add(button4);
-        mainFrame.add(controlPanel);
+        mainFrame.add(panel);
         mainFrame.add(button5);
         mainFrame.add(button6);
         mainFrame.add(button7);
